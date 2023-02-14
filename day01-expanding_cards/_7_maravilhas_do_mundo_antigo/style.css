@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,200;0,400;1,100&display=swap');
+/*font-family: 'Tourney', cursive;*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    width: 98vw;
+    border-bottom: 3px solid rgba(128, 128, 128, 0.5);
+}
+
+.content {
+    display: flex;
+    width: 100vw;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 65vh;
+    border-radius: 50px;
+    margin: 0px 5px;
+    flex: 0.5;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    transition: flex 1s ease-in-out;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.dest:hover {
+    transform: scale(1.03);
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease-in-out;
+}
+
+.panel h3 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: .3rem;
+    padding: 4px 6px;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    opacity: 0;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s 0.7s;
+}
+
+.panel div {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: .3rem;
+    padding: 4px 6px;
+    position: fixed;
+    margin: 20px;
+    width: 96vw;
+    height: 20vh;
+    cursor: auto;
+    bottom: 10px;
+    left: 0;
+    opacity: 0;
+    display: none;
+    
+}
+
+.panel div p {
+    margin: 5px;
+}
+
+.panel div p:first-child {
+    text-indent: 1em;
+}
+
+.panel.active div {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel.active div {
+    transition: text 0.3s 0.7s;
+}
+
+.maravilha1 {
+    background-image: url(img/a_grande_piramide_de_gize.jpg);
+}
+.maravilha2 {
+    background-image: url(img/o_mausoleu_de_halicarnasso.jpg);
+}
+.maravilha3 {
+    background-image: url(img/a_estatua_de_zeus.jpg);
+}
+.maravilha4 {
+    background-image: url(img/os_jardins_suspensos_da_babilonia.jpg);
+}
+.maravilha5 {
+    background-image: url(img/o_farol_de_alexandria.jpg);
+}
+.maravilha6 {
+    background-image: url(img/o-templo_de_artemis.jpg);
+}
+.maravilha7 {
+    background-image: url(img/o_colosso_de_rodes.jpg);
+}
+
+
+@media (min-width: 1300px) {
+    .content {
+        width: 70vw;
+    }
+    .panel div {
+        height: 15vh;
+    }
+    .panel div p:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 780px) {
+    .content {
+        width: 100vw;
+    }
+    .panel div p:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 685px) and (max-height: 685px) {
+    body{
+        height: 100vh;
+    }
+    .panel div {
+        display: none !important;
+    }
+}
