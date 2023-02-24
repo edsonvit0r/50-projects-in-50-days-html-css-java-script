@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Estágios do Câncer de Mama</title>
+</head>
+<body>
+
+    <header>
+        <h1>Estágios do Câncer de Mama</h1>
+
+        <p>O câncer de mama pode ser invasivo ou não. No estágio em que não é invasivo é chamado de in situ: ele fica isolado em um ponto da mama, revestido por uma membrana que impede seu transporte para outras partes do organismo. Quando essa membrana se rompe, o câncer se torna invasivo e pode se transportar para outros órgãos e também produzindo as temidas metástases.</p>
+    </header>
+
+    <div class="container-information">
+        <h2>Estágio <span id="num-stage">0</span></h2>
+        <div class="container-stages">
+
+            <div class="stage s-active">
+                <img src="img/estagio-0.png" alt="Ilustration of cancer stage">
+                <p class="stage-n">Nesse momento as células cancerosas ainda estão contidas nos ductos (carcinomas in situ) e normalmente as alterações celulares não chegam a formar nódulos. Geralmente é detectado com facilidade pela mamografia e as chances de cura são de praticamente 100%.</p>
+            </div>
+            <div class="stage">
+                <img src="img/estagio-1.png" alt="Ilustration of cancer stage">
+                <p class="stage-n">Nesse estágio o tumor já invadiu a região local, mas mede menos de 2 cm e não acometeu as glândulas linfáticas da axila. Seu diagnóstico pode ser através do autoexame, da mamografia ou de outros exames médicos e geralmente seu tratamento é com cirurgia e radioterapia.</p>
+            </div>
+            <div class="stage">
+                <img src="img/estagio-2.png" alt="Ilustration of cancer stage">
+                <p class="stage-n">O nódulo mede entre 2 a 5 cm e já atingiu alguns linfonodos. O tratamento utilizado geralmente vai além da cirurgia e radioterapia, incluindo a quimioterapia e a hormonoterapia.</p>
+            </div>
+            <div class="stage">
+                <img src="img/estagio-3.png" alt="Ilustration of cancer stage">
+                <p class="stage-n">Nesse momento os tumores já medem mais de 5 cm e se disseminaram por vários linfonodos próximos, podendo atingir músculos e pele. A maioria dos casos no Brasil é detectado nesse estágio e geralmente o tratamento é feito através da cirurgia, radio e quimioterapia.</p>
+            </div>
+            <div class="stage">
+                <img src="img/estagio-4.png" alt="Ilustration of cancer stage">
+                <p class="stage-n">É caracterizado por tumores de qualquer tamanho com metástase e com as glândulas linfáticas já comprometidas. Nesse estágio, os tumores também já atingiram outras partes do corpo. O tratamento consiste em hormonoterapia e quimioterapia e a sobrevida do paciente varia de acordo com a localização dos tumores e sua resposta ao tratamento.</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="container-steps">
+
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active" >0</div>
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+
+        </div>
+
+        <button class="btn" id="prev">Anterior</button>
+        <button class="btn" id="next">Próximo</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
