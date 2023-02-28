@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+/*font-family: 'Muli', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+/*font-family: 'Secular One', sans-serif;*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FE7073;
+    color: #FFF;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-style: oblique;
+    white-space: nowrap;
+}
+
+.container {
+    background-color: transparent;
+    border: 8px solid #DB4850;
+    padding: 20px 50px;
+    max-width: 500px;
+    max-height: 500px;
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: oblique;
+}
+
+.container::before, .container::after {
+    font-family: 'Secular One', sans-serif;
+    content: '"';
+    background-color: #DB4850;
+    width: 50px;
+    height: 50px;
+    font-size: 3rem;
+    font-style: normal;
+}
+
+.container::before {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    transform: rotate(180deg);
+}
+
+.container::after {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+}
+
+.new_advice {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bolder;
+    color: #6b070c;
+}
+.new_advice:active {
+    transform: scale(0.95);
+    background-color: #ffffffc5;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: auto;
+        height: auto;
+    }
+
+    .date {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .container p {
+        font-size: 1.5rem;
+    }
+}
